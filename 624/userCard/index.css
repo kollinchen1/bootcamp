@@ -1,0 +1,45 @@
+html{
+    font-family: 'Roboto', sans-serif;
+} 
+
+.cardContainer{
+    height:350px;
+    background: linear-gradient(to bottom, aqua 20%, white 20%);
+    border: 2px solid lightgray;
+    position: absolute;
+    left:10%;
+    right:10%;
+    top: 10%;
+}
+#profilePic{
+    border: 5px solid lightgray;
+    border-radius: 50%;
+    margin: 40px 0 0 30px;
+}
+.cardContainer h1{
+    margin: 5px 0 0 30px;
+    font-size: 32px;
+    font-weight: 500;
+}
+.cardContainer h2{
+    margin: 15px 0 0 30px;
+    font-size: 16px;
+    font-weight: 400;
+}
+#mapMarker{
+    margin-right: 5px;
+}  
+#gear{
+    margin-right: 5px;
+} 
+.jobsEducation{
+    margin: 15px 0 0 30px;
+}
+.jobsEducation p{
+    margin:5px 0;
+}
+.cardContainer h3{
+    margin: 15px 0 0 30px;
+    font-size: 15px;
+    font-weight: 400;
+}
