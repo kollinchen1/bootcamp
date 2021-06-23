@@ -1,0 +1,75 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fixed width container class that will "auto-center" itself */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+/* buttonUp */
+.btn{
+    border:1px solid black;
+    padding: 8px 35px;
+    color:white;
+    background-color:lightskyblue;
+    box-shadow: 5px 5px 2px 1px black;
+}
+/* flex-ible */
+.row {
+    display: flex;  
+}
+.col{
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    background-color: green;
+}
+/* navBar */
+li{
+    display: inline-block;
+    font-weight: 200;
+    font-size: 13px;
+    margin: 0 8px;
+}
+.active{
+    font-weight: 500;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+.nav-title{
+    font-size:25px;
+    font-weight: 600;
+}
+.nav{
+    border-radius: 8px;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0px 15px;
+    background-color: rgba(5, 5, 5, 0.39);
+}
+
+.btn1{
+    background-color: aqua;
+    color:white;
+    border-radius:  8px;
+    padding: 5px 8px;
+    box-shadow: 3px 3px 5px 1px black;
+}
+
+
+/* profile */
+.cardContainer{
+    width:450px;
+    min-height:350px;
+    background: linear-gradient(to bottom, #17a2b8 23%, white 23%);
+    border: 2px solid lightgray;
+    border-radius: 8px;
+}
