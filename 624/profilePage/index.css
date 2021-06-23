@@ -48,7 +48,7 @@ li{
 
 /* userCard starts*/
 .cardContainer{
-    width:500px;
+    width:450px;
     min-height:350px;
     background: linear-gradient(to bottom, #17a2b8 23%, white 23%);
     border: 2px solid lightgray;
@@ -95,23 +95,37 @@ li{
     flex-direction: row;
     padding:0 8%;
 }
+/* education Container starts */
 .educationBoard{
     margin-top: 30px;
-    width:500px;
-    height:300px;
+    width:450px;
+    height:250px;
     border: 2px solid lightgray;
     border-radius: 8px;
-    background: linear-gradient(to bottom, #333333 20%, white 20%);
 }
-
-.connections{
-    margin-top: -150px;
-    background: linear-gradient(to bottom, #333333 20%, white 20%);
-    border: 2px solid lightgray;
-    border-radius: 8px;
-    height:300px;
-    width:200px;
+.topEducation{
+    display:flex;
+    height:45px;
+    background-color: #333333;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
+.topEducation p{
+    color: white;
+    padding: 0 20px;
+    font-size: 16px;
+}
+.bottomEducation{
+    margin: 5px 0 0 30px;
+}
+.bottomEducation h3{
+    font-weight:600;
+}
+.bottomEducation h4{
+    color: rgb(175, 173, 173);
+    font-weight: 500;
+}
+/* education Container ends */
 
 /* request Container starts */
 .requests{
@@ -132,19 +146,76 @@ li{
     border-top-right-radius: 8px;
 }
 .topRequest p{
+    flex:2;
     font-size: 14px;
 }
 #circleTwo{ 
-    margin-right: 5px;
+    margin-right: 10px;
     color:black;
     padding: 3px 7px;
     border-radius: 50%;
     background-color:#9e9e9e;
 }
 .bottomRequest{
-    display: flex;
-    padding:0 10px;
-    justify-content:space-between;
-}
 
+    padding:0 12px;
+}
+.col-2 img{
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.row{
+    display:flex;
+    align-items:center;
+}
+.col-2 p{
+    display:flex;
+    align-items:center;
+}
+.col-2{
+    flex: 2;
+
+}
 /* request container ends */
+
+/* connect container starts */
+.connections{
+    margin-top: -120px;
+    border: 2px solid lightgray;
+    border-radius: 8px;
+    height:300px;
+    width:200px;
+}
+.topConnections{
+    display:flex;
+    justify-content:center;
+    height:45px;
+    color: white;
+    background-color: #333333;
+    padding: 1px 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.topConnections p{
+    font-size: 14px;
+}
+.bottomConnections{
+    padding:5px 12px;
+}
+.bottomConnections p{
+    display:flex;
+    align-items: center;
+}
+.bottomConnections img{
+    margin-right:10px;
+    border-radius: 50%;
+}
+.borderForBottom{
+    border-top: 2px solid lightgray;
+    padding: 10px 12px;
+}
+.borderForBottom a{
+    
+    color:cornflowerblue;
+}
+/* connect container ends */
