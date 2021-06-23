@@ -1,5 +1,4 @@
-var numbers = [];
-for(var i = 0; i< numbers.length; i++){
+for(var i = 1; i< 100; i++){
     if(numbers[i]%5){
 
         if(numbers[i]%3){
