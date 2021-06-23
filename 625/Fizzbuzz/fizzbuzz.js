@@ -1,15 +1,15 @@
-for(var i = 1; i< 100; i++){
-    if(numbers[i]%5){
+for(var i = 1; i<=100; i++){
+    if(i%5 ==0){
 
-        if(numbers[i]%3){
+        if(i%3 == 0){
             console.log("fizzBuzz");
         }
         else{
             console.log("fizz");
         }
     }
-    else if(numbers[i]%3){ // numbers[i]%3 && numbers[i]%5
-        if(numbers[i]%5){
+    else if(i%3==0){ // i%3 && i%5
+        if(i%5==0){
             console.log("fizzBuzz");
         }
         else{
@@ -17,7 +17,7 @@ for(var i = 1; i< 100; i++){
         }
     }
     else{
-        console.log(numbers[i]);
+        console.log(i);
     }
     
 }
