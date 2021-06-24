@@ -1,0 +1,98 @@
+*{
+    padding:0;
+    margin:0;
+}
+html{
+    font-family: 'Montserrat', sans-serif
+}
+.nav{
+    background-color:#cccccc;
+    height:80px;
+    color:black;
+    margin:0 8%;
+}
+.navContainer{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:inherit;
+    padding:0 30px;
+}
+.navContainer input{
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    width: 100%;
+    margin: 0 10%;
+}
+.btn{
+    border:1px solid black;
+    padding: 8px 25px;
+    color:white;
+    background-color:#2b78e4;
+    box-shadow: 2px 2px 3px 1px black;
+    cursor:pointer;
+}
+.bodyArea{
+    margin: 30px 8%;
+    display:flex;
+}
+.leftColumn{
+    flex:2;
+    margin-right: 20px;
+}
+.rightColumn{
+    flex:1;
+    margin-left: 20px;
+}
+.leftContent{
+    padding: 20px;
+    align-self: top;
+    text-align:center;
+}
+.leftContent h1{
+    font-weight: 500;
+    font-size:35px;
+    margin-bottom: 10px;
+}
+.leftContent p{
+    margin: 15px 0;
+}
+.rightContent{  
+    font-size:18px;
+    align-self: center;
+    padding: 20px;
+}
+.dojonaryBox1{
+    display:flex;
+    margin-bottom: 30px;
+    height: 230px;
+    border:3px solid black;
+}
+.dojonaryBox2{
+    padding: 20px;
+    min-height: 130px;
+    border:3px solid black;
+}
+.yellowBtn{
+    padding:8px 18px;
+    color:black;
+    background-color:#fed966;
+    border-radius: 5px;
+}
+.greenBtn{
+    background-color:#93c47d;
+    color:black;
+    border-radius: 5px;
+}
+.dojonaryBox2 h1{
+    font-size: 25px;
+    font-weight:400;
+}
+.dojonaryBox2 button{   
+    font-size: 15px;
+    font-weight:500;
+}
+.alignCenter{
+    margin: 20px 0;
+    text-align: center;
+}

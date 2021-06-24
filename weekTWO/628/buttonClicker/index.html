@@ -1,0 +1,70 @@
+<!DOCTYPE html>  
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="index.css">
+        <title>Dojonary</title>
+        
+    </head>
+    <body>
+        <div class="nav">
+            <div class="navContainer">
+                <h1>Dojonary</h1>
+                <input type="text" placeholder="Search" name="query" class="search">
+                <button class="btn" id="loginStatus" onclick="loginOrLogout(this)">Login</button>
+            </div>
+        </div>
+        <div class = "bodyArea">
+            <div class = "leftColumn">
+                <div class="dojonaryBox1">
+                    <div class="leftContent">
+                        <h1>ninja</h1>
+                        <p>noun</p>
+                        <p>Plural:ninjas</p>
+                        <button class="btn yellowBtn" onclick="clickedLikes()">13 likes</button>
+                    </div>
+                    <div class="rightContent">
+                        <p>A practitioner skilled in the 
+                            <a href="#">Japanese</a> 
+                            art of 
+                            <a href="#">ninjutsu</a>
+                        </p>
+                    </div>
+                    
+                </div>
+                <div class="dojonaryBox1">
+                    <div class="leftContent">
+                        <h1>ninja</h1>
+                        <p>noun</p>
+                        <p>Plural:ninjas</p>
+                        <button class="btn yellowBtn"onclick="clickedLikes()">37 likes</button>
+                    </div>
+                    <div class="rightContent">
+                        <p>A 
+                            <a href="#">programmer</a> 
+                            who breaks down problems with
+                            <a href="#">zen</a>-like focus
+                        
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class = "rightColumn">
+                <div class="dojonaryBox2">
+                    <!-- align left by default   -->
+                    <h1>Dojonary is defined by <strong>YOU</strong></h6>
+                    <div class="alignCenter" >  <!-- align center   -->
+                        <button class="btn greenBtn"onclick="hideMe(this)">Add Definition</button>   
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <script src="script.js"></script>
+    </body>
+    <div class="footer"></div>
+</html>
+    
