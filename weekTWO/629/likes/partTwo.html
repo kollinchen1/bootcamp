@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Likes</title>
+        <link rel="stylesheet" href="style.css">
+        <div class="nav">
+            <h1>Network</h1>
+        </div>
+        <h1 class="alignMiddle">Your Feed</h1>
+    </head>
+    <body>
+        <div class= "bodyContainer">
+            <div class="leftColumn">
+                <div class="profileContainer">
+                    <img src="assets/user.png" alt="user-circle" width="100" height="100">
+                    <a href>Add an avatar</a>
+                    <h1>James Doe</h1>
+                </div>
+            </div>
+            <div class="rightColumn">
+                <div class="containerI">
+                    <div class = "flexContainer">
+                        <h1>Neil M</h1>
+                        <h2 id="likes0">9 like(s)</h2>
+                        <button class="yellowBtn" onclick="increaseLike(0)">Like</button>
+                        
+                    </div>
+                    <h3>I just set up this new discord bot, leet me know what you all think.<a href="#">link</a></h3>
+                </div>
+                <div class="containerI">
+                    <div class = "flexContainer">
+                        <h1>Nichole K</h1>
+                        <h2 id="likes1">12 like(s)</h2>
+                        <button class="yellowBtn" onclick="increaseLike(1)">Like</button>
+                        
+                    </div>
+                    <h3>Just finished my <a href="#">next comic</a>, check it out</h3>
+                </div>
+                <div class="containerI">
+                    <div class = "flexContainer">
+                        <h1>Jim R</h1>
+                        <h2 id="likes2">9 like(s)</h2>
+                        <button class="yellowBtn" onclick="increaseLike(2)">Like</button>
+                        
+                    </div>
+                    <h3>I can't stop listening to the <a href="$">new album</a>. who else is liking it?</h3>
+                </div>
+            </div>
+
+        </div>
+        
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+*{
+    padding:0;
+    margin:0;
+}
+.containerI{
+    margin-bottom: 20px;
+    border: 2px solid black;
+    height:150px;
+    
+}
+.containerI h3{
+    padding: 0 25px;
+    font-weight: 500;
+}
+
+.flexContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin: 20px 20px 30px;
+}
+.flexContainer h1,h2{
+    font-size: 25px;
+    font-weight: 500;
+}
+.yellowBtn{
+    border:1px solid black;
+    padding:8px 18px;
+    color:black;
+    background-color:#fed966;
+    box-shadow: 2px 2px 3px 1px black;
+    cursor:pointer;
+    border-radius: 5px;
+}
+/* part 2 addition */
+.nav{
+    background-color:black;
+    color:white;
+    margin:0 8%;
+}
+.nav h1{
+    padding:10px 20px;
+}
+.alignMiddle{
+    margin: 10px 0;
+    text-align: center;
+}
+.leftColumn{
+    flex:2;
+    margin-right: 15px;
+}
+.rightColumn{
+    flex:5;
+    margin-left: 15px;
+}
+
+.bodyContainer{
+    margin:0 8%;
+    display: flex;
+}
+.profileContainer{
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    height:250px;
+    border: 2px  solid black;
+}
+.profileContainer h1{
+    font-size: 25px;
+    font-weight: 500;
+}
+
