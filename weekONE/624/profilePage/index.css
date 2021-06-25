@@ -2,6 +2,7 @@ html{
 
     font-family: 'Roboto', sans-serif;
 }
+
 li{
     display: flex;
     font-weight: 200;
@@ -78,12 +79,10 @@ li{
     font-size: 16px;
     font-weight: 400;
 }
-#mapMarker{
+#mapMarker,#gear{
     margin-right: 5px;
 }  
-#gear{
-    margin-right: 5px;
-} 
+
 .jobsEducation{
     margin: 15px 0 0 30px;
 }
