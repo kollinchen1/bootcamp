@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+/* navBar */
+.flex-container, .nav-links, .nav ,.degree{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-container {
+    width: 1000px;
+    margin: 0 10%;
+}
+.nav{
+    background-color:#9fc5f8;
+    height: 80px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.nav-title{
+    font-size: 35px;
+}
+.nav-links {
+    width: 45%;
+    list-style-type: none;
+}
+.nav-links a {
+    cursor: pointer;
+    font-size: 20px;
+    color: #f3f3f3;
+    text-decoration: none;
+}
+/* nav Ends */
+
+/* body section One starts*/
+.bodyHeader{
+    margin: 0 10%;
+    padding: 15px 0;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* body section One ends*/
+
+/* body section two starts*/
+
+
+.byDates{
+    margin:15px 10%;
+    display: flex;
+    justify-content:space-between;
+}
+.boxContainer{
+    background-color:#eeeeee;
+    min-height:290px;
+    width:150px;
+    margin: 0 10px;
+    text-align:center;
+    padding:15px 10px;
+}
+.boxContainer h1{
+    font-size: 25px;
+}
+.boxContainer img{
+    border-radius: 50%;
+    margin:20px 0;
+}
+.left{
+    margin-left:0;
+}
+.right{
+    margin-right:0;
+}   
+.degree{
+    margin: 20px;
+}
+.degree p{
+    font-size: 23px;
+}
+.blue{
+    color:#2b78e4;
+}
+.red{
+    color:#d13734;
+}
+
+/* body section two ends*/
+
+
+/* cookies section starts*/
+.cookies{
+    padding:10px;
+    width:auto;
+    position: fixed; 
+    bottom:0;
+    background-color:#eeeeee;
+    margin:15px 10%;
+    border: 3px solid black;
+}
+.flexCookies{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.btn {
+    height: 30px;
+    color:black;
+    background-color: #9fc5f8;
+    font-size: 1rem;
+    padding:5px 8px;
+    font-weight: bold;
+    box-shadow: 2px 2px 2px black;
+}
+.cookieImg,.cookiesBtn{
+    text-align: center;
+    flex:1;
+}
+.cookiesMiddle h1{
+    font-size: 25px;
+    margin-bottom:10px;
+
+}
+.cookiesMiddle{
+    flex:4;
+    margin:10px;
+
+}
+/* cookies section ends*/

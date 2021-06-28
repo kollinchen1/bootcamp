@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Weather Forecast</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="flex-container">
+            <h1 class="nav-title">DojoWeather</h1>
+            <ul class="nav-links">
+                <li><a onclick="alertWeather()">Burbank</a></li>
+                <li><a onclick="alertWeather()">Chicago</a></li>
+                <li><a onclick="alertWeather()">Dallas</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="bodyHeader">
+        <h1>San Jose</h1>
+        <div>
+            <label>show temperatures in  </label>
+            <select onchange="chooseScale(this)">
+                <option>°C</option>
+                <option>°F</option>
+            </select>
+        </div>
+    </div>
+    <div class="byDates">
+        <div class="boxContainer left">
+            <h1>Today</h1>
+            <img src="assets/some_rain.png" width="130" height="130">
+            <p>some rain</p>
+            <div class="degree">
+                <p class="red" id="temperatures1">24°</p>
+                <p class="blue" id="temperatures2">18°</p>
+            </div>
+        </div>
+        <div class="boxContainer">
+            <h1>Tomorrow</h1>
+            <img src="assets/some_sun.png" width="130" height="130">
+            <p>some sun</p>
+            <div class="degree">
+                <p class="red" id="temperatures3">27°</p>
+                <p class="blue" id="temperatures4">18°</p>
+            </div>
+        </div>
+        <div class="boxContainer">
+            <h1>Friday</h1>
+            <img src="assets/some_clouds.png" width="130" height="130">
+            <p>some clouds</p>
+            <div class="degree">
+                <p class="red" id="temperatures5">21°</p>
+                <p class="blue" id="temperatures6">16°</p>
+            </div>
+        </div>
+        <div class="boxContainer right">
+            <h1>Saturday</h1>
+            <img src="assets/some_sun.png" width="130" height="130">
+            <p>some sun</p>
+            <div class="degree">
+                <p class="red" id="temperatures7">26°</p>
+                <p class="blue" id="temperatures8">21°</p>
+            </div>
+        </div>
+    </div>
+    <div class="cookies" id="cookies">
+        <div class="flexCookies">
+            <div class="cookieImg">
+                <img src = "assets/cookie.png"width="50" height="50">
+
+            </div>
+            <div class="cookiesMiddle">
+                <h1>Stop! Cookie time</h1>
+                <p>
+                    We use cookies (sadly not the edible ones) to personalize 
+                    content and ads, to provide social media features and to 
+                    analyse our traddic. <a href="#">Read more...</a>
+                </p>
+            </div>
+            <div class="cookiesBtn">
+                <button class="btn" onclick="hideCookies()">I Accept</button>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
