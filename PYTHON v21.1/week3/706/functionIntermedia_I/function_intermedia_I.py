@@ -49,7 +49,8 @@ dojo = {
 }
 def printInfo(dojo):
     for x,y in dojo.items():
-        print(len(dojo[x]),x)
+        
+        print(f"\n{len(dojo[x])} {x.upper()}")
         for z in y:
             print(z)
 printInfo(dojo)
