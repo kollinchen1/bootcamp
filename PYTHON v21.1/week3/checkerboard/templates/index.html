@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='my_style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='my_script.js') }}"></script>
+    <title>Checkerboard</title>
+    <style>
+        table tr td{
+            width: 50px;
+            height: 50px;
+        }
+        .color1{
+            background-color:{{color1}}
+        }
+
+        .color2{
+            background-color:{{color2}}
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        {% for x in range(row): %}
+            <tr>
+                {% for y in range(col): %}
+                    <td class="color{{(x+y)%2+1}}"></td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+
+
+    </table>
+    <!-- <div style="margin:100px 10%">
+        <div style="display:flex;flex-wrap: wrap; justify-content:start">
+            {% for x in range(0,row): %}
+                {% for y in range(0,col): %}
+                    {% if (x+y)%2 != 0 %}
+                        <div class="color1" style="height:50px; width:50px;"></div>
+                    {% else %}
+                        <div class="color2" style="height:50px; width:50px;"></div>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div> -->
+    
+</body>
+</html>
