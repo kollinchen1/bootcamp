@@ -1,0 +1,21 @@
+.button {
+    border: none;
+    color: white;
+    padding: 15px 32px!important;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+}
+.green{
+    background-color: #4CAF50;
+}
+.red{
+    background-color: #f17d84;
+}
+.form{
+    margin-top: 50px;
+    text-align: center;
+}
