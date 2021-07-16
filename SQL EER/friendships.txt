@@ -1,0 +1,50 @@
+INSERT INTO users(first_name,last_name,created_at,updated_at)
+VALUES("Jane", "Austen",NOW(),NOW()),
+	("Emily","Dickinson",NOW(),NOW()),
+    ("Fyodor","Dostoevsky",NOW(),NOW()),
+    ("William", "Shakespeare",NOW(),NOW()),
+    ("Emma","Watson",NOW(),NOW()),
+	("Lau", "Tzu",NOW(),NOW());
+-- Query: Have user 1 be friends with user 2, 4 and 6
+INSERT INTO friendships(user_id, friend_id, created_at, updated_at)
+VALUES(1,2,NOW(),NOW()),
+	(1,4,NOW(),NOW()),
+    (1,6,NOW(),NOW()),
+    (2,1,NOW(),NOW()),
+    (2,3,NOW(),NOW()),
+    (2,5,NOW(),NOW()),
+    (3,2,NOW(),NOW()),
+    (3,5,NOW(),NOW()),
+    (4,3,NOW(),NOW()),
+    (5,1,NOW(),NOW()),
+    (5,6,NOW(),NOW()),
+    (6,2,NOW(),NOW()),
+    (6,3,NOW(),NOW());
+
+SELECT users.first_name,users.last_name, user2.first_name as friend_first_name,user2.last_name as friend_last_name FROM users 
+JOIN friendships ON users.id = user_id
+LEFT JOIN users as user2 ON user2.id = friend_id;
+-- NINJA Query: Return all users who are friends with the first user, 
+-- make sure their names are displayed in results.
+SELECT users.first_name, users.last_name FROM users
+lEFT JOIN friendships ON users.id=friend_id WHERE user_id = 1;
+-- NINJA Query: Return the count of all friendships
+SELECT count(*)friendships
+FROM friendships;
+-- NINJA Query: Find out who has the most friends and return the count of their friends.
+SELECT concat(users.first_name, users.last_name) as name, count(*) as friendships
+FROM users
+JOIN friendships ON users.id = user_id
+LEFT JOIN users as user2 ON user2.id = friend_id
+GROUP BY name
+ORDER BY friendships DESC;
+
+SELECT users.first_name,users.last_name, user2.first_name as friend_first_name,user2.last_name as friend_last_name FROM users 
+JOIN friendships ON users.id = user_id
+LEFT JOIN users as user2 ON user2.id = friend_id
+WHERE users.id = 3
+ORDER BY first_name;
+
+
+SELECT * FROM users;
+SELECT * FROM friendships;

@@ -12,7 +12,11 @@ def hello_world():
 @app.route('/process', methods=['POST'])  
 def gotAnswers():
     print(request.form)
-    session['name'] = request.form['name']
+    if request.form['name'] !="":
+        print("here 16")
+        session['name'] = request.form['name']
+    else:
+        return redirect("/")
     session['dojo_location'] = request.form['dojo_location']
     session['favorite_language'] = request.form['favorite_language']
     session['comment'] = request.form['comment']
@@ -21,19 +25,15 @@ def gotAnswers():
 @app.route('/result')          # The "@" decorator associates this route with the function immediately following
 def print_result():
     print(session['name'])
-    if session['name'] !="":
-        name = session['name']
-    else:
-        name = "Nobody"
     print(session['dojo_location'])
     print(session['favorite_language'])
     print(session['comment'])
     if session['comment'] !="":
         comment = session['comment']
     else:
-        comment = "Hi there, I am "+name+" :)"
+        comment = "Hi there, I am "+session['name']+" :)"
     return render_template("result.html", 
-        name = name, 
+        name = session['name'], 
         location = session['dojo_location'], 
         language = session['favorite_language']+"!!!!!!",
         comment = comment

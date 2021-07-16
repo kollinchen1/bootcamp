@@ -1,0 +1,21 @@
+DELETE FROM users WHERE id >= 0;
+INSERT INTO users(first_name,last_name,email,created_at,updated_at)
+VALUES("nobody","somebody","ns@email.com",NOW(),NOW()),
+	("nobody1","somebody1","ns1@email.com",NOW(),NOW()),
+	("nobody2","somebody2","ns2@email.com",NOW(),NOW());
+    
+SELECT * FROM users;
+SELECT * FROM users WHERE (email = 'ns@email.com');
+SELECT *
+FROM users
+WHERE id = 3;
+UPDATE users SET last_name = 'Pancakes',updated_at = NOW() WHERE (id = 3);
+DELETE FROM users WHERE id = 2;
+
+SELECT *
+FROM users
+ORDER BY first_name ASC;
+
+SELECT *
+FROM users
+ORDER BY first_name DESC;

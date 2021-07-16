@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='my_style.css') }}">
+    <title>Read(One)</title>
+</head>
+<body id="user_one_body">
+    <h1>User {{ user.id }}<a style="float:right" href="/">Home</a></h1>
+    <div class="user_one_box">
+        <p>Full Name: {{ user.first_name }} {{user.last_name}}</p>
+        <p>Email: {{ user.email }}</p>
+        <p>Created On: {{ user.created_at.strftime("%B %d, %Y") }}</p>
+        <p>Last Updated On: {{ user.updated_at.strftime("%B %d, %Y at %I:%M %p") }}</p>
+
+    </div>
+    <a href="/users/{{ user.id }}/edit">Edit</a> |
+    <a href="/users/{{ user.id }}/delete">Delete</a>
+</body>
+</html>

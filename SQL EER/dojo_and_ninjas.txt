@@ -1,0 +1,35 @@
+INSERT INTO dojos(name,created_at,updated_at)
+VALUES("nobody",NOW(),NOW()),
+	("nobody1",NOW(),NOW()),
+	("nobody2",NOW(),NOW());
+DELETE FROM dojos WHERE id >= 0;
+INSERT INTO dojos(name,created_at,updated_at)
+VALUES("nobody",NOW(),NOW()),
+	("nobody1",NOW(),NOW()),
+	("nobody2",NOW(),NOW());
+
+INSERT INTO ninjas(first_name,last_name,age,dojo_id,created_at,updated_at)
+VALUES("ninja11","11",11,4,NOW(),NOW()),
+	("ninja12","12",12,4,NOW(),NOW()),
+	("ninja13","13",13,4,NOW(),NOW());
+    
+INSERT INTO ninjas(first_name,last_name,age,dojo_id,created_at,updated_at)
+VALUES("ninja21","21",21,5,NOW(),NOW()),
+	("ninja22","22",22,5,NOW(),NOW()),
+	("ninja23","23",23,5,NOW(),NOW());
+    
+INSERT INTO ninjas(first_name,last_name,age,dojo_id,created_at,updated_at)
+VALUES("ninja31","31",31,6,NOW(),NOW()),
+	("ninja32","32",32,6,NOW(),NOW()),
+	("ninja33","33",33,6,NOW(),NOW());    
+SELECT * FROM ninjas WHERE dojo_id = 4;
+SELECT * FROM ninjas WHERE dojo_id = 6;
+
+SELECT * FROM dojos;
+SELECT * FROM users WHERE (email = 'ns@email.com');
+
+SELECT dojo_id
+FROM ninjas
+WHERE id = 9;
+
+

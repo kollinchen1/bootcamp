@@ -1,0 +1,11 @@
+USE twitter;
+
+SELECT *
+FROM users;
+
+INSERT INTO users (first_name) 
+VALUES('Nobody');
+
+UPDATE `twitter`.`users` SET `birthday` = '2020-01-02' WHERE (`id` = '6'); 
+
+DELETE FROM users WHERE (id >=7)

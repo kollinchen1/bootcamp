@@ -1,0 +1,44 @@
+/* index starts */
+
+#users {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#users td, #users th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#users tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+#users tr:hover {
+    background-color: #ddd;
+}
+
+#users th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #98bfda;
+    color: white;
+}
+/* index ends */
+
+/* create starts */
+#create_body,#user_one_body{
+    margin: 20px 25%;
+}
+
+#create_form input{
+    width:300px;
+}
+
+/* user One */
+.user_one_box{
+    margin-bottom: 20px;
+    padding: 20px;
+    border:1px solid black;
+}
