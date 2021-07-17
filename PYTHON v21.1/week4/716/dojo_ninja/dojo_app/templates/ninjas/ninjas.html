@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dojo.css') }}">
+    <title>Document</title>
+</head>
+<body id="ninja_new">
+    <h1>New Ninja</h1>
+    <form action="/ninjas/create" method="post" class = "flex">
+        <div>
+            <p>Dojo:</p>
+            <p>First Name:</p>
+            <p>Last Name</p>
+            <p>Age</p>
+        </div>
+        <div style="margin-left: 50px">
+            <p>
+                <select name="dojo_id" id="">
+                    {% for dojo in all_dojos %}
+                    <option value="{{ dojo.id }}">{{ dojo.name }}</option>
+                    {% endfor %}
+                </select>
+            </p>
+            <p><input type="tel" name="first_name" id=""></p>
+            <p><input type="tel" name="last_name" id=""></p>
+            <p><input type="number" name="age" id=""></p>
+            <button>Create</button>
+        </div>
+    
+    </form>
+    <!-- <form action="/ninjas/create" method="post">
+        Dojo:
+        <select name="dojo_id" id="">
+            {% for dojo in all_dojos %}
+            <option value="{{ dojo.id }}">{{ dojo.name }}</option>
+            {% endfor %}
+        </select>
+        <p>
+        First Name:
+        <input type="tel" name="first_name" id="">
+        </p>
+        <p>
+        Last Name:
+        <input type="tel" name="last_name" id="">
+        </p>
+        <p>
+        age:
+        <input type="number" name="age" id="">
+        </p>
+        <button>Create</button>
+    </form> -->
+
+    <a class="homeButton" href="/">Home</a>
+</body>
+</html>
