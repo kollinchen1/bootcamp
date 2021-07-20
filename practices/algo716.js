@@ -27,8 +27,8 @@ function isAnagram(s1, s2) {
         return false
     s1 = s1.toLowerCase()
     s2 = s2.toLowerCase()
-    let s1d = {}, s2d = {}, len = s1.length;
-    for(let i = 0; i<len;i++){
+    let s1d = {}, s2d = {};
+    for(let i = 0; i<s1.length;i++){
         index = s1[i]
         if(s1d.hasOwnProperty(index))
             s1d[index]++;
@@ -77,7 +77,6 @@ function trim(str) {
         }
     }
     return str.substring(a,b+1);
-    return str.trim();
 }
 
 console.log(trim(str1));
