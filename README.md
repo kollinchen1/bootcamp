@@ -1,4 +1,4 @@
-# bootcamp
+# Codingdojo bootcamp June-Sep 2021
 
 $ pipenv install PyMySQL flask
 
