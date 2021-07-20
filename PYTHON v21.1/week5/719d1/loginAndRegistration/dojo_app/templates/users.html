@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x' crossorigin='anonymous'>
+    <title>Users</title>
+</head>
+<body>
+    <div class="container p-3">
+        {% with messages = get_flashed_messages(category_filter=["welcome"]) %}
+            <p class ="green_alert" >{{ messages[0] }}</p>
+        {% endwith %}
+        <h1>WElCOME, {{ user.first_name }} {{ user.last_name }}!!!</h1>
+        <p>{{ user.email }}</p>
+        <p>{{ user.birthday }} </p>
+        <p>{{ user.gender }}</p>
+        <a href="/logout" class=btn>Logout</a>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+.red_alert{
+    margin:-16px 0 0 0;
+    color:red;
+    font-size: 13px;
+}
+#longerInputBox{
+    width:100%;
+}
+
+.normal_margin{
+    margin: 0 0 5px 0;
+}
+
+.green_alert{
+    color:#4de164;
+    font-size: 16px;
+}
