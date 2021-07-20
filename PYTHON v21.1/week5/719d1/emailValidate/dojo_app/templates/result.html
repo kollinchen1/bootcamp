@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>email Survey Index</title>
+</head>
+<body>
+    
+    <div class="container">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                <p class="green_alert">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <div class="insideContainer">
+            <h1>Email Addresses Entered</h1>
+            {% for email in emails %}
+                <div class = "flex-container">
+                    <p>{{email.email}}</p>
+                    <p>{{email.created_at.strftime("%B %d, %Y %I:%M %p")}}</p>
+                    <a href="/emails/{{ email.id }}/delete">Delete</a>
+
+                </div>
+            {% endfor %}
+
+        </div>
+        
+    </div>
+    
+</body>
+</html>
