@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x' crossorigin='anonymous'>
+    <title>Recipes</title>
+</head>
+<body>
+    <div class="d-flex justify-content-around align-items-center col-10 mt-4">
+            <h1>Add New Recipe!</h1>
+        <div>
+            <a style="margin-right: 20px;" href="/dashboard">Dashboard</a>
+            <a href="/logout">Logout</a>
+        </div>
+        
+    </div>
+    <form >
+    
+    
+    </form>
+    <form class="container px-5  d-flex justify-content-around col-10 m-5" action="/recipes/create" method="post">
+        <div class="left-form">
+            <p>Name:</p>
+            <p><input type="text" name="name" id=""></p>
+            <p>Description:</p>
+            <p><textarea name="description"rows="4" cols="50"></textarea></p>
+            <p>Instruction:</p>
+            <p><textarea name="instruction" rows="4" cols="50"></textarea></p>
+            <button class='btn btn-primary btn-sm'>Create</button>
+        </div>
+        <div class="right-form">
+            <p>Date Made On:</p>
+            <p><input type="date" name="date_made" id=""></p>
+            <p>Under 30 Minutes?</p>
+            <p>
+                <input type="radio" name="under30" value="yes" id="">
+                Yes &emsp;
+                <input type="radio" name="under30" value="no" id="">
+                No
+            </p>
+                
+        </div>
+        
+    </form>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            <p class="text-danger">{{ message }}</p>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x' crossorigin='anonymous'>
+    <title>Recipe</title>
+</head>
+<body>
+    <div class="d-flex justify-content-around align-items-center mt-4">
+        <div>
+            <h1>Welcome {{ logged_in_user.first_name }}!</br></h1>
+            <p>{{ logged_in_user.email }}</p>
+        </div>
+        
+        <div>
+            <a style="margin-right: 20px;" href="/dashboard">Dashboard</a>
+            <a href="/logout">Logout</a>
+        </div>
+        
+    </div>
+    <div class="main">
+        <h1>{{recipe.name}}</h1>
+        <p>Creator: {{ recipe.user.first_name }} {{ recipe.user.last_name }}</p>
+        <p>Description: {{ recipe.description }}</p>
+        <p>Under 30 minutes: {{ recipe.under30 }}</p>
+        <p>Instruction: {{ recipe.instruction }}</p>
+        <p>Date Made: {{recipe.date_made.strftime("%Y-%m-%d")}}</p>
+
+    </div>
+</body>
+</html>
