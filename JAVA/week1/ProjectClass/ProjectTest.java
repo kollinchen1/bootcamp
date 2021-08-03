@@ -9,5 +9,12 @@ public class ProjectTest {
         System.out.println(ed.elevatorPitch());
         System.out.println(ko.elevatorPitch());
         System.out.println(empty.elevatorPitch());
+
+        Portfolio portfolio = new Portfolio();
+        portfolio.Add(ed);
+        portfolio.Add(ko);
+        portfolio.Add(empty);
+        System.out.println("Total Cost: "+portfolio.getPortfolioCost());
+        portfolio.showPortfolio();
     }
 }
