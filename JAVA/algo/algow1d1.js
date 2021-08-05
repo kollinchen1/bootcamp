@@ -17,7 +17,19 @@ for (let i of [7,3,5,2]) {
     runner_temp = new_node;
 }
 
-console.log(head.val);
-console.log(head.next.val);
-console.log(head.next.next.next.val);
+printValues(){
+    if(this.head == null){
+        console.log("LIST EMPTY")
+        return
+    }
+    // IF THE LIST IS NOT EMPTY
+    var runner = this.head
+    while(runner != null){
+        console.log(runner.value)
+        runner = runner.next
+    }
+}
+// console.log(head.val);
+// console.log(head.next.val);
+// console.log(head.next.next.next.val);
 
