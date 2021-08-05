@@ -12,6 +12,7 @@ public class BankAccount {
 		savingBalance = 0;
 		numOfAccs++;
 	}
+	
 	private String generateAccNum() {
 		Random rand = new Random();
 		int i = 0;
