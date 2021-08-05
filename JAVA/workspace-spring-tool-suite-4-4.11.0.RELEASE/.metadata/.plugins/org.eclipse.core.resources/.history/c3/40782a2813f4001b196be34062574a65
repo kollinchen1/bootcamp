@@ -1,0 +1,6 @@
+package com.weekone.bankaccount;
+
+public class BankAccount {
+	double checkingBalance;
+	double savingsBalance;
+}

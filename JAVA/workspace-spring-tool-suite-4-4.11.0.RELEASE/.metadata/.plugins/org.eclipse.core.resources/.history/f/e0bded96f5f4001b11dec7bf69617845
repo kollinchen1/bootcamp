@@ -1,0 +1,62 @@
+package com.weekone.calone;
+
+public class Calculator {
+	
+	protected double operandOne;
+	protected double operandTwo;
+	protected String operation;
+	protected double results;
+	private boolean oneCheck = false;
+	private boolean twoCheck = false;
+	private boolean	operationCheck = false;
+	public Calculator() {
+		
+	}
+	public void setOperandOne(double operandOne) {
+		oneCheck = true;
+		this.operandOne = operandOne;
+	}
+	public void setOperandTwo(double operandTwo) {
+		twoCheck = true;
+		this.operandTwo = operandTwo;
+	}
+	public void setOperation(String operation) {
+		if(operation.equals("+")||
+				operation.equals("-")||
+				operation.equals("/")||
+				operation.equals("*")||
+				operation.equals("%")) {
+			
+		}
+		this.operation = operation;
+	}
+	public void performOperation() {
+		if(oneCheck && twoCheck&&operationCheck) {
+			switch(operation) {
+			case "+": 
+				results = operandOne + operandTwo;
+				break;
+			case "-":
+				results = operandOne - operandTwo;
+				break;
+			case "/":
+				results = operandOne / operandTwo;
+				break;
+			case "*":
+				results = operandOne * operandTwo;
+				break;
+			case "%":
+				results = operandOne % operandTwo;
+				break;
+				
+			}
+		}
+		else {
+			System.out.print("please set all operands first");
+		}
+			
+	}
+	public double getResults() {
+		return results;
+	}
+}

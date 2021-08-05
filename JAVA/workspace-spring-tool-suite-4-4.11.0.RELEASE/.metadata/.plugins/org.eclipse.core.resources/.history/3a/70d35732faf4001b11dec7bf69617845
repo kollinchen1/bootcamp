@@ -1,0 +1,15 @@
+package com.weekone.calone;
+
+public class CalTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Calculator cal = new Calculator();
+		cal.setOperandOne(10.5);
+		cal.setOperation("+");
+		cal.setOperandTwo(5.2);
+		cal.performOperation();
+		System.out.println(cal.getResults());
+	}
+
+}

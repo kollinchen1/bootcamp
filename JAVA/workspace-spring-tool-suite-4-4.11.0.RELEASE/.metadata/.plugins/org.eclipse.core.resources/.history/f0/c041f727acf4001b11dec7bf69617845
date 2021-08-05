@@ -1,0 +1,5 @@
+package com.weekone.pokemon;
+
+public abstract class AbstractPokemon {
+
+}

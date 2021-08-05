@@ -1,0 +1,5 @@
+package com.weekone.objectmaster;
+
+public class Ninja extends Human {
+
+}

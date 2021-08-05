@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.weekone.pokemon.PokemonIntereface.java&apos; to &apos;PokemonInterface.java&apos;&#x0A;- Original project: &apos;Pokemon&apos;&#x0A;- Original element: &apos;com.weekone.pokemon.PokemonIntereface.java&apos;&#x0A;- Renamed element: &apos;com.weekone.pokemon.PokemonInterface.java&apos;" description="Rename compilation unit &apos;PokemonIntereface.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;com.weekone.pokemon{PokemonIntereface.java" name="PokemonInterface.java" references="false" stamp="1628029659118" version="1.0"/>
+</session>

@@ -1,0 +1,14 @@
+package com.weekone.pokemon;
+
+public class PokemonTest {
+
+	public static void main(String[] args) {
+		Pokemon p1 = new Pokemon("char",100,"fire");
+		Pokemon p2 = new Pokemon("bul",100,"water");
+		p1.attackPokemon(p2);
+		p1.getHealth();
+		p2.getHealth();
+
+	}
+
+}

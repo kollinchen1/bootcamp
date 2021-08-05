@@ -1,0 +1,18 @@
+package com.weekone.bankaccount;
+
+public class BankAccount {
+	private double checkingBalance;
+	private double savingBalance;
+	private static int numOfAccs = 0;
+	private static double totalMoney = 0;
+	public BankAccount() {
+		numOfAccs++;
+	}
+	public double getChecking() {
+		return checkingBalance;
+		
+	}
+	public double getSaving() {
+		return savingBalance;
+	}
+}

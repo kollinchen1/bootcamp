@@ -1,0 +1,17 @@
+package com.weekone.pokemon;
+
+public class PokemonTest {
+
+	public static void main(String[] args) {
+		Pokemon p1 = new Pokemon("duck","10000","normal");
+		Pokemon p2 = new Pokemon("bul",100,"water");
+		Pokedex p3 = new Pokedex();
+		p3.createPokemon("char",100,"fire");
+		p1.attackPokemon(p2);
+		
+		System.out.println(p1.getHealth());
+		System.out.println(p2.getHealth());
+		System.out.println(Pokemon.count);
+	}
+
+}

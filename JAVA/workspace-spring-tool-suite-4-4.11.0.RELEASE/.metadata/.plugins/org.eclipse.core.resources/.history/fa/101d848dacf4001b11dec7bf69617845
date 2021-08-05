@@ -1,0 +1,6 @@
+package com.weekone.pokemon;
+
+public class Pokedex extends AbstractPokemon {
+    // your code here
+}
+

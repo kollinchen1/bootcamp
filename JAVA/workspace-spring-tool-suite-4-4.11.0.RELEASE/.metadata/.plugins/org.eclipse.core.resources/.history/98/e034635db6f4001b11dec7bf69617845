@@ -1,0 +1,23 @@
+package com.weekone.phone;
+
+public class Galaxy extends Phone implements Ringable {
+    public Galaxy(String versionNumber, int batteryPercentage, String carrier, String ringTone) {
+        super(versionNumber, batteryPercentage, carrier, ringTone);
+    }
+    @Override
+    public String ring() {
+    	return getClass().getName()+" "+this.getVersionNumber()+" says "+ringTone;
+        // your code here
+    }
+    @Override
+    public String unlock() {
+    	return getClass().getName()+" "+this.getVersionNumber()+" says "+ringTone;
+        // your code here
+    }
+    @Override
+    public void displayInfo() {
+    	return getClass().getName()+" "+this.getVersionNumber()+" says "+this.getRingtone();
+        // your code here            
+    }
+}
+

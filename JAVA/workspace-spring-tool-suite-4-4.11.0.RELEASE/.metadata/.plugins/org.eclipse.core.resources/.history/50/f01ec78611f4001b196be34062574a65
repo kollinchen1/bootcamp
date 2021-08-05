@@ -1,0 +1,20 @@
+package com.weekone.objectmaster;
+
+public class Ninja extends Human {
+	private int stealth = 10;
+	public Ninja() {
+		super();
+	}
+	
+	public void steal(Human h) {
+		h.health-=stealth;
+		this.health+=stealth;
+	}
+	public void runAway(){
+		this.health -= 10;
+	}
+	public int getHealth() {
+		return health;
+	}
+}
+

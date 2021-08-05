@@ -1,0 +1,57 @@
+package com.weekone.bankaccount;
+
+public class BankAccount {
+	private double checkingBalance;
+	private double savingBalance;
+	private static int numOfAccs = 0;
+	private static double totalMoney = 0;
+	public BankAccount() {
+		checkingBalance = 0;
+		savingBalance = 0;
+		numOfAccs++;
+	}
+	public double getChecking() {
+		return checkingBalance;
+		
+	}
+	public double getSaving() {
+		return savingBalance;
+	}
+	public void deposit(double amount, String type) {
+		if(type.equalsIgnoreCase("saving")) {
+			savingBalance += amount;
+			totalMoney += amount;
+		}
+		else if(type.equalsIgnoreCase("checking")){
+			checkingBalance += amount;
+			totalMoney += amount;
+		}
+		else {
+			System.out.println("Please double check account entered")
+		}
+	}
+	public void withdraw(double amount, String type) {
+		if(type.equalsIgnoreCase("saving")) {
+			if(savingBalance - amount >=0) {
+				savingBalance -= amount;
+				totalMoney -= amount;
+			}
+			else {
+				System.out.println("insufficient funds in your savings account");
+			}
+		}
+		else if(type.equalsIgnoreCase("checking")){
+			if(savingBalance - amount >=0) {
+				checkingBalance -= amount;
+				totalMoney -= amount;
+			}
+			else {
+				System.out.println("insufficient funds in your checkings account");
+			}
+			
+		}
+		else {
+			System.out.println("Please double check account entered")
+		}
+	}
+}

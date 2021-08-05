@@ -1,0 +1,68 @@
+package com.weekone.dll;
+
+public class DLL {
+	public Node head;
+	public Node tail;
+	private int size = 0;
+	public DLL() {
+        this.head = null;
+        this.tail = null;
+    }   
+	public void push(Node newNode) {
+        // if there is no head in the list, aka, an empty list, we set the newNode to be the head and tail of the list
+        if(this.head == null) {
+            this.head = newNode;
+            this.tail = newNode;
+            size++;
+            return;
+        }
+        // first find the lastNode in the list
+        // then, set the lastNode's next to be the newNode;
+        // then, we have to set the previous of the lastNode to the lastNode that we found previously.
+        // finally, set the list's tail to be the node that we have added
+        Node lastNode = this.tail;
+        lastNode.next = newNode;
+        newNode.prev = lastNode;
+        this.tail = newNode;
+        size++;
+    }
+	public void printValuesForward() {
+		System.out.println();
+        // find the first node, aka head.
+        Node current = this.head;
+        
+        // while the current node exists...
+        while(current != null) {
+            // print it's value
+            System.out.print(current.value+" ");
+            // and move on to it's next node.
+            current = current.next;
+        }
+    }	   
+	public void printValuesBackward() {
+		System.out.println();
+		Node current = this.tail;
+        // while the current node exists...
+        while(current != null) {
+            // print it's value
+            System.out.print(current.value+" ");
+            // and move on to it's next node.
+            current = current.prev;
+        }
+	}
+	public Node pop() {
+		
+		Node temp = this.tail;
+		this.tail.prev.next = null;
+		this.tail = tail.prev;	
+		size--;
+		return temp;
+		
+	}
+	public boolean contains(Integer value) {
+		return false;
+	}
+	public int size() {
+		return size;
+	}
+}

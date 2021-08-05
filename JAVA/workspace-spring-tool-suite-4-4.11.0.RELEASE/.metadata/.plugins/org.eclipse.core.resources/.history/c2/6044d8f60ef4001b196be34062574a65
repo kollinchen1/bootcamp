@@ -1,0 +1,20 @@
+package com.weekone.objectmaster;
+
+public class Human {
+	private int strength;
+	private int stealth;
+	private int intelligence;
+	private int health = 100;
+	public int defaultAttibutes = 3;
+	public Human() {
+		this.strength = this.defaultAttibutes;
+		this.stealth = this.defaultAttibutes;
+		this.intelligence = this.defaultAttibutes;
+	}
+	public void attack(Human h) {
+		h.health -= this.strength;
+	}
+	public int getHealth() {
+		return health;
+	}
+}

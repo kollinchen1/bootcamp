@@ -1,0 +1,11 @@
+package com.weekone.bankaccount;
+
+public class BankAccountTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BankAccount b1 = new BankAccount();
+		b1.withdraw(1000, "saving");
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.weekone.dll;
+
+public class DLL {
+	public Node head;
+	public Node tail;
+	
+	public DLL() {
+        this.head = null;
+        this.tail = null;
+    }   
+		   
+}

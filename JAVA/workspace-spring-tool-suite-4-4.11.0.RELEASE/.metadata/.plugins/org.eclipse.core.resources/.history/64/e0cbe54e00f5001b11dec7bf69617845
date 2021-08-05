@@ -1,0 +1,75 @@
+package com.weekone.calone;
+
+public class Calculator {
+	
+	protected double operandOne;
+	protected double operandTwo;
+	protected String operation;
+	protected double results;
+	protected double addSubResults = 0;
+	private boolean oneCheck = false;
+	private boolean twoCheck = false;
+	private boolean	operationCheck = false;
+	public Calculator() {
+		
+	}
+	public void performOperation(double operation) {
+		if(oneCheck == false) {
+			this.operandOne = operation;
+			oneCheck = true;
+		}
+		else if(twoCheck == false) {
+			this.operandTwo = operation;
+			twoCheck = true;
+		}
+		
+	}
+	public void performOperation(String operation) {
+		if(operation.equals("+")||operation.equals("-")) {
+			switch(operation) {
+			case "+": 
+				addSubResults += operandOne;
+				oneCheck = false;
+				operationCheck = false;
+				break;
+			case "-":
+				addSubResults -= operandOne;
+				oneCheck = false;
+				operationCheck = false;
+				break;
+			}
+		}
+		else if(operation.equals("/")||
+				operation.equals("*")||
+				operation.equals("%")) {
+			this.operation = operation;
+			operationCheck = true;
+		}	
+		else if(operation.equals("=")) {
+			results+=addSubResults;
+		}
+		if(oneCheck && twoCheck&&operationCheck) {
+			switch(operation) {
+			case "/":
+				results += operandOne / operandTwo;
+				twoCheck = false;
+				operationCheck = false;
+				break;
+			case "*":
+				results += operandOne * operandTwo;
+				twoCheck = false;
+				operationCheck = false;
+				break;
+			case "%":
+				results += operandOne % operandTwo;
+				twoCheck = false;
+				operationCheck = false;
+				break;
+			}
+		}
+	}
+//	
+	public double getResults() {
+		return results;
+	}
+}
